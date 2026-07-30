@@ -1,6 +1,6 @@
+import logging
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-import logging
 
 app = FastAPI(title="maritime-career API", version="0.1.0")
 logger = logging.getLogger("api")
