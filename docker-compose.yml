@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: maritime
+      POSTGRES_USER: maritime
+      POSTGRES_PASSWORD: changeme
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  api:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://maritime:changeme@postgres:5432/maritime
+    ports:
+      - "8000:8000"
+volumes:
+  pgdata:

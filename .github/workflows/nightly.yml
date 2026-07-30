@@ -1,0 +1,11 @@
+name: Nightly
+on:
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  nightly-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Nightly tasks placeholder"
