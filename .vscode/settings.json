@@ -51,5 +51,16 @@
     "git.useForcePushIfIncludes": false,
     "git.showPushSuccessNotification": true,
     "git.enableSmartCommit": true,
-    "git.confirmEmptyCommits": false
+    "git.confirmEmptyCommits": false,
+    "chat.agent.networkFilter": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.agent.sandbox.allowNetwork": true,
+    "chat.agent.sandbox.enabled": "on",
+    "chat.agent.sandbox.fileSystem.mac": {
+        
+        "denyRead": [],
+        "allowRead": [],
+        "allowWrite": [],
+        "denyWrite": []
+    }
 }
