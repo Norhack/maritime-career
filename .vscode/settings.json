@@ -29,6 +29,12 @@
     "github.copilot.chat.rateLimitAutoSwitchToAuto": true,
     "github.copilot.chat.preferLongContext.enabled": true,
     "github.copilot.chat.scopeSelection": true,
+    "chat.agent.sandbox.enabled": "on",
+    "chat.agent.sandbox.fileSystem.mac": {
+        "allowWrite": [
+            "."
+        ]
+    },
     "github.copilot.completions.chat.enabled": true,
     "jsts-chat-features.skills.enabled": true,
     "playwright-local-browser-server.autoStart": true,
