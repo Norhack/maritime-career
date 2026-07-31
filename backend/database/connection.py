@@ -1,6 +1,7 @@
 import logging
 import os
 from collections.abc import AsyncGenerator, Generator
+from urllib.parse import urlsplit, urlunsplit
 
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
@@ -8,6 +9,31 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 from sqlalchemy.orm import Session, sessionmaker
 
 logger = logging.getLogger(__name__)
+
+
+def redact_database_url(url: str) -> str:
+    try:
+        parsed = urlsplit(url)
+    except ValueError:
+        return url
+
+    if not parsed.password:
+        return url
+
+    userinfo = parsed.username or ""
+    if parsed.username and parsed.password:
+        userinfo = f"{parsed.username}:***"
+    elif parsed.password:
+        userinfo = "***"
+
+    netloc = userinfo
+    if parsed.hostname:
+        netloc = f"{userinfo}@{parsed.hostname}" if userinfo else parsed.hostname
+        if parsed.port:
+            netloc = f"{netloc}:{parsed.port}"
+
+    return urlunsplit((parsed.scheme, netloc, parsed.path, parsed.query, parsed.fragment))
+
 
 load_dotenv()
 
@@ -19,7 +45,7 @@ if DATABASE_URL.startswith("sqlite"):
 
 engine = create_engine(DATABASE_URL, **engine_options)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-logger.info(f"Database engine initialized with URL: {DATABASE_URL}")
+logger.info("Database engine initialized with URL: %s", redact_database_url(DATABASE_URL))
 
 # Async setup
 async_database_url = DATABASE_URL
@@ -34,7 +60,7 @@ async_engine = create_async_engine(
 AsyncSessionLocal = async_sessionmaker(
     async_engine, class_=AsyncSession, expire_on_commit=False
 )
-logger.info(f"Async database engine initialized with URL: {async_database_url}")
+logger.info("Async database engine initialized with URL: %s", redact_database_url(async_database_url))
 
 
 def get_db() -> Generator[Session, None, None]:
