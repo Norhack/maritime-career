@@ -1,0 +1,51 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.browser.experimentalUserTools.enabled": true,
+    "github.copilot.chat.claudeAgent.allowAutoPermissions": true,
+    "github.copilot.chat.claudeAgent.useSdkExtension": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.anthropic.tools.websearch.enabled": true,
+    "github.copilot.chat.claude48OpusPrompt.enabled": true,
+    "github.copilot.chat.claudeSonnet5Prompt.enabled": true,
+    "github.copilot.chat.conversationCompaction.usePrismCompaction": true,
+    "github.copilot.chat.exploreAgent.enabled": true,
+    "github.copilot.chat.gemini3LowReasoningEffort.enabled": true,
+    "github.copilot.chat.githubMcpServer.enabled": true,
+    "github.copilot.chat.githubMcpServer.lockdown": true,
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "github.copilot.chat.languageContext.typescript.includeDocumentation": true,
+    "github.copilot.chat.newWorkspace.useContext7": true,
+    "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+    "github.copilot.chat.notebook.followCellExecution.enabled": true,
+    "github.copilot.chat.responsesApi.promptCacheBreakpoint.enabled": true,
+    "github.copilot.chat.responsesApi.promptCacheKey.enabled": true,
+    "github.copilot.chat.responsesApiContextManagement.enabled": true,
+    "github.copilot.chat.switchAgent.enabled": true,
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.chat.claudeAgent.allowDangerouslySkipPermissions": true,
+    "github.copilot.chat.rateLimitAutoSwitchToAuto": true,
+    "github.copilot.chat.preferLongContext.enabled": true,
+    "github.copilot.chat.scopeSelection": true,
+    "github.copilot.completions.chat.enabled": true,
+    "jsts-chat-features.skills.enabled": true,
+    "playwright-local-browser-server.autoStart": true,
+    "playwright-mcp-relay.autoConnect": true,
+    "chat.planAgent.defaultModel": "Auto (copilot)",
+    "chat.mcp.assisted.nuget.enabled": true,
+    "inlineChat.defaultModel": "Auto (copilot)",
+    "python.analysis.aiHoverSummaries": true,
+    "containers.promptForRegistryWhenPushingImages": true,
+    "java.debug.settings.onBuildFailureProceed": false,
+    "chat.tools.terminal.autoApprove": {
+        "/^python \"C:\\\\Users\\\\SEM\\\\\\.agents\\\\skills\\\\developing-with-streamlit\\\\scripts\\\\discover\\.py\" --project-dir \"C:\\\\Users\\\\SEM\\\\maritime-career\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "python.experiments.optInto": [
+        
+    ]
+}
