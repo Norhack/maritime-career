@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_DB: maritime
       POSTGRES_USER: maritime
-      POSTGRES_PASSWORD: changeme
+      POSTGRES_PASSWORD: Qwerty-5020!?! 
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
