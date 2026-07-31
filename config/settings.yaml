@@ -1,8 +1,8 @@
 postgres:
   host: postgres
   port: 5432
-  database: maritime
+  database: maritimedb
   user: maritime
-  password: changeme
+  password: Qwerty-5020!?!
 
 secrets: {}
