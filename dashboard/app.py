@@ -1,5 +1,4 @@
 import streamlit as st
-
 st.set_page_config(page_title="Maritime Career Dashboard")
 st.title("Maritime Career Dashboard")
 st.sidebar.title("Navigation")
