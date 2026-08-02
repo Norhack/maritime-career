@@ -1,17 +1,14 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
-
     {
-      "name": "Debug Streamlit Dashboard",
-      "type": "debugpy",
+      "name": "Python: Streamlit Dashboard",
+      "type": "python",
       "request": "launch",
       "module": "streamlit",
       "args": ["run", "dashboard/app.py"],
-      "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
-      "justMyCode": false
+      "justMyCode": true
     }
   ]
 }
